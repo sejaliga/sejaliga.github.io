@@ -10,6 +10,14 @@ body {
   background-color: #504F4E;
 }
 
+.bg-lyellow {
+    background-color: #FEDC16;
+}
+
+.txt-liga {
+    color: #504F4E;
+}
+
 .titulo-hq {
   font-size: 1rem;
 }
