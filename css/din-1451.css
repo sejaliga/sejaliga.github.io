@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Alte-DIN-1451-Mittelschrift';
+    src:url('../webfonts/alte-din-1451-mittelschrift/Alte-DIN-1451-Mittelschrift.ttf.woff') format('woff'),
+        url('../webfonts/alte-din-1451-mittelschrift/Alte-DIN-1451-Mittelschrift.ttf.svg#Alte-DIN-1451-Mittelschrift') format('svg'),
+        url('../webfonts/alte-din-1451-mittelschrift/Alte-DIN-1451-Mittelschrift.ttf.eot'),
+        url('../webfonts/alte-din-1451-mittelschrift/Alte-DIN-1451-Mittelschrift.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}

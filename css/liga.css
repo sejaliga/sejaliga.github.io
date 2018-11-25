@@ -1,0 +1,52 @@
+body {
+  background-color: #F3ECE3;
+}
+
+.upq {
+  font-family: 'Alte-DIN-1451-Mittelschrift';
+}
+
+.bg-liga {
+  background-color: #504F4E;
+}
+
+.titulo-hq {
+  font-size: 1.1rem;
+}
+
+.skao {
+  bottom:0;
+}
+
+.skl {
+  left:0;
+}
+
+.skr {
+  right:0;
+}
+
+.hqg {
+  width: 100%;
+  height: 278px;
+  bottom:0;
+}
+
+.noa {
+  background-image: url(../img/capa/academia-gotham-segundo-semestre-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 106%;
+}
+
+.icone {
+  padding: 0.45rem .2rem .35rem;
+}
+
+
+.nowrap {
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
