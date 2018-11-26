@@ -18,6 +18,10 @@ body {
     color: #504F4E;
 }
 
+.txt-light {
+  color: #9E9E9E;
+}
+
 .titulo-hq {
   font-size: 1rem;
 }
@@ -55,10 +59,20 @@ body {
     white-space: nowrap;
 }
 
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 
 .no-underline {
     text-decoration: none !important;
+}
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators li {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%!important;
 }
