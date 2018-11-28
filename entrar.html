@@ -31,35 +31,30 @@
     <body>
         <main role="main" class="container">
             <form class="container bg-white shadow-sm rounded p-3 my-3">
-              <img class="mb-4 w-25" src="img/favicon.png" alt="LIGA">
-              <h1 class="h3 mb-3 font-weight-normal">Registro</h1>
+              <div class="text-center"><img class="mb-4 w-25 rounded" src="img/liga/liga-quadrado-sl.svg" alt="LIGA"></div>
+              <h1 class="h3 mb-3 font-weight-normal">Entrar</h1>
               <div class="form-group">
-                <label for="exampleInputEmail1">Nome completo</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="A face atrás da máscara">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Nome de usuário</label>
+                <label for="exampleInputEmail1">E-mail ou Nome de usuário</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Sua identidade secreta">
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">E-mail</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="O chamado do herói">
-                <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
-              </div>
-              <div class="form-group">
                 <label for="exampleInputPassword1">Senha</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Arma tão secreta quanto sua identidade secreta">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Seu segredo">
               </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Lembrar-se de mim</label>
               </div>
-              <button type="submit" class="btn btn-primary">Cadastrar-se</button>
+              <button type="submit" class="btn btn-block btn-primary">Cadastrar-se</button>
+              <div class="alert alert-warning mt-3 mb-0" role="alert">
+                Ainda não possui uma identidade secreta na LIGA? Então <a href="registrar.html">cadastre-se</a>. <br />
+                Esqueceu sua senha? <a href="index.html">Redefinir</a>.
+              </div>
             </form>
         </main>
 
         <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark">
-          <a class="navbar-brand" href="index.html"><img src="img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          <a class="navbar-brand" href="index.html"><img src="img/liga/liga-quadrado-o-sl.svg" width="30" height="30" class="rounded d-inline-block align-top" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
