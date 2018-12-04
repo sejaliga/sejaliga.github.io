@@ -28,10 +28,24 @@
         <link href="css/liga.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="myFunction()">
+        <!-- Preloader with Bootstrap Progress Bar -->
+        <div id='loader'>
+          <div class='loader-container'>
+            <h3>Comunidade.</h3>
+            <h3>Interação.</h3>
+            <h3 class="mb-3">Troca.</h3>
+
+            <div class='progress progress-striped active'>
+              <div class='progress-bar progress-bar-color' id='bar' role='progressbar'></div>
+            </div>
+
+          </div>
+        </div>
+
         <div class="nav-scroller bg-white shadow-sm">
             <nav class="nav nav-underline">
-                <a class="nav-link active" href="#">Todos</a>
+                <a class="nav-link active" href="#" onclick="goTodos()">Todos</a>
                 <!--a class="nav-link" href="#">
                     Friends
                     <span class="badge badge-pill bg-light align-text-bottom">27</span>
@@ -39,7 +53,7 @@
                 <a class="nav-link" href="#">Individuais</a>
                 <a class="nav-link" href="#">Coleções</a>
                 <a class="nav-link" href="#">Encadernados</a>
-                <a class="nav-link" href="#">DC Comics</a>
+                <a class="nav-link" href="#" onclick="goDC()">DC Comics</a>
                 <a class="nav-link" href="#">Marvel Comics</a>
                 <a class="nav-link" href="#">Mauricio de Sousa Produções</a>
             </nav>
@@ -75,7 +89,7 @@
 
         <main role="main" class="container">
           <div class="row mt-3 px-2">
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos">
               <div class="shadow-sm">
                 <a href="quadrinho-1.html" class="text-body no-underline">
                 <img src="img/capa/academia-gotham-segundo-semestre-1.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -96,7 +110,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-2.html" class="text-body no-underline">
                 <img src="img/capa/doutor-estranho-a-marca-16.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -111,7 +125,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos">
               <div class="shadow-sm">
                 <a href="quadrinho-3.html" class="text-body no-underline">
                 <img src="img/capa/lendas-do-universo-dc-novos-titas-3.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -126,7 +140,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-4.html" class="text-body no-underline">
                 <img src="img/capa/sandman-o-teatro-do-misterio-1-o-tarantula.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -141,7 +155,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-5.html" class="text-body no-underline">
                 <img src="img/capa/thor-guerra-13.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -156,7 +170,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-6.html" class="text-body no-underline">
                 <img src="img/capa/turma-da-monica-jovem-94-reinado-dos-jovens.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -171,7 +185,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-7.html" class="text-body no-underline">
                 <img src="img/capa/corto-maltese.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -186,7 +200,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-8.html" class="text-body no-underline">
                 <img src="img/capa/jeremias-pele.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -201,7 +215,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-9.html" class="text-body no-underline">
                 <img src="img/capa/moby-dick.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -216,7 +230,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2">
+            <div class="col-6 px-2 todos noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-10.html" class="text-body no-underline">
                 <img src="img/capa/boku-no-hero-vol-4.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -307,39 +321,48 @@
             </div-->
         </main>
 
-        <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark">
-          <a class="navbar-brand" href="index.html"><img src="img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+          <!--a class="navbar-brand" href="#">Bottom navbar</a-->
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav text-white p-0" href="index.html">
+                  <i class="fas fa-bookmark d-block mb-1 icon-nav"></i>Biblioteca</a>
+              </div>
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav disabled p-0" href="https://liga.freeflarum.com/">
+                  <i class="fas fa-users d-block mb-1 icon-nav"></i>Comunidade</a>
+              </div>
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav disabled p-0" href="mensagens.html">
+                  <i class="fas fa-inbox d-block mb-1 icon-nav"></i>Mensagens</a>
+              </div>
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav disabled p-0" href="meu-perfil.html">
+                  <i class="fas fa-user d-block mb-1 icon-nav"></i>Perfil</a>
+              </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse nav-scroller" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto nowrap">
-                <!--li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i>&nbsp;&nbsp;Início</a>
-                </li-->
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;Biblioteca <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://liga.freeflarum.com/"><i class="fas fa-users"></i>&nbsp;&nbsp;Comunidade</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mensagens.html"><i class="fas fa-inbox"></i>&nbsp;&nbsp;Mensagens</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="meu-perfil.html"><i class="fas fa-user"></i>&nbsp;&nbsp;Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="eventos.html"><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Eventos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="parcerias.html"><i class="fas fa-hands-helping"></i>&nbsp;&nbsp;Parcerias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre-a-liga.html"><i class="fas fa-info"></i>&nbsp;&nbsp;Sobre a LIGA</a>
-                </li>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <hr class="mb-2" />
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="eventos.html">
+                    <i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Eventos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="parcerias.html">
+                    <i class="fas fa-hands-helping"></i>&nbsp;&nbsp;Parcerias</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="sobre-a-liga.html">
+                    <i class="fas fa-info"></i>&nbsp;&nbsp;Sobre a LIGA</a>
+              </li>
+              <form class="form-inline">
+                <input class="form-control col-10" type="search" placeholder="Procurar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 ml-1" type="submit"><i class="fas fa-search"></i></button>
+              </form>
               <!--li class="nav-item">
-                <a class="nav-link disabled" href="#">Perfil</a>
+                <a class="nav-link disabled" href="#">Disabled</a>
               </li>
               <li class="nav-item dropup">
                 <a class="nav-link dropdown-toggle" href="https://getbootstrap.com" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
@@ -362,6 +385,8 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/vendor/holder.min.js"></script>
         <script src="js/offcanvas.js"></script>
+        <script src="js/liga.js"></script>
+        <script src="js/preloader.js"></script>
         <script type="text/javascript">
             $(window).on('load',function(){
                 $('#myModal').modal('show');

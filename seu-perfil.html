@@ -67,34 +67,57 @@
           </div>
         </main>
 
-        <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark">
-          <a class="navbar-brand" href="index.html"><img src="img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+          <!--a class="navbar-brand" href="#">Bottom navbar</a-->
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav disabled p-0" href="index.html">
+                  <i class="fas fa-bookmark d-block mb-1 icon-nav"></i>Biblioteca</a>
+              </div>
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav text-white p-0" href="https://liga.freeflarum.com/">
+                  <i class="fas fa-users d-block mb-1 icon-nav"></i>Comunidade</a>
+              </div>
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav disabled p-0" href="mensagens.html">
+                  <i class="fas fa-inbox d-block mb-1 icon-nav"></i>Mensagens</a>
+              </div>
+              <div class="text-center pt-2">
+                <a class="nav-link txt-nav disabled p-0" href="meu-perfil.html">
+                  <i class="fas fa-user d-block mb-1 icon-nav"></i>Perfil</a>
+              </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse nav-scroller" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto nowrap">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html"><i class="fas fa-bookmark"></i>&nbsp;&nbsp;Biblioteca</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://liga.freeflarum.com/"><i class="fas fa-users"></i>&nbsp;&nbsp;Comunidade</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mensagens.html"><i class="fas fa-inbox"></i>&nbsp;&nbsp;Mensagens</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="meu-perfil.html"><i class="fas fa-user"></i>&nbsp;&nbsp;Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="eventos.html"><i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Eventos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="parcerias.html"><i class="fas fa-hands-helping"></i>&nbsp;&nbsp;Parcerias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sobre-a-liga.html"><i class="fas fa-info"></i>&nbsp;&nbsp;Sobre a LIGA</a>
-                </li>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <hr class="mb-2" />
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="eventos.html">
+                    <i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;Eventos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="parcerias.html">
+                    <i class="fas fa-hands-helping"></i>&nbsp;&nbsp;Parcerias</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="sobre-a-liga.html">
+                    <i class="fas fa-info"></i>&nbsp;&nbsp;Sobre a LIGA</a>
+              </li>
+              <form class="form-inline">
+                <input class="form-control col-10" type="search" placeholder="Procurar" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 ml-1" type="submit"><i class="fas fa-search"></i></button>
+              </form>
+              <!--li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+              <li class="nav-item dropup">
+                <a class="nav-link dropdown-toggle" href="https://getbootstrap.com" id="dropdown10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown10">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li-->
             </ul>
           </div>
         </nav>
