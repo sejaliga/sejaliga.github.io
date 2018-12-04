@@ -104,6 +104,14 @@ body {
   font-size: .8rem;
 }
 
+.text-danger {
+  color: #D60A51 !important;
+}
+
+.text-success {
+  color: #FFC900 !important;
+}
+
 /* Preloader with Bootstrap Progress Bar
 -----------------------------------------------*/
 #loader {
