@@ -1,7 +1,7 @@
 var myVar;
 
 function myFunction() {
-    myVar = setTimeout(showPage, 3000);
+    myVar = setTimeout(showPage, 2000);
 }
 
 function showPage() {
@@ -22,4 +22,4 @@ var progress = setInterval(function () {
     if ($bar.width() / 6 == 100){
       $bar.text("Still working ... " + $bar.width() / 6 + "%");
     }*/
-}, 500);
+}, 250);
