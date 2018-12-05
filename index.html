@@ -47,21 +47,22 @@
         </div>
 
         <nav class="navbar navbar-light bg-light">
-          <form class="form-inline container" action="https://sejaliga.github.io/">
-            <input id="tftextinput" class="form-control col-10" type="search" placeholder="Procurar" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 ml-1" style="color:#D60A51!important;border:1px solid #D60A51!important;background-color:rgba(214, 10, 81, .25);" type="submit"><i class="fas fa-search"></i></button>
+          <form class="form-inline container">
+            <input class="form-control col-10" type="search" placeholder="Procurar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 ml-1" style="color:#D60A51!important;border:1px solid #D60A51!important;background-color:rgba(214, 10, 81, .05);" type="submit"><i class="fas fa-search"></i></button>
           </form>
         </nav>
 
         <div class="nav-scroller bg-white shadow-sm">
             <nav class="nav nav-underline">
                 <a class="nav-link active" href="#" onclick="goTodos()">Todos</a>
-                <a class="nav-link" href="#">Individuais</a>
-                <a class="nav-link" href="#">Coleções</a>
-                <a class="nav-link" href="#">Encadernados</a>
+                <a class="nav-link" href="#" onclick="goAvulso()">Avulsos</a>
+                <a class="nav-link" href="#" onclick="goCol()">Coleções</a>
+                <a class="nav-link" href="#" onclick="goEnc()">Encadernados</a>
+                <a class="nav-link" href="#" onclick="goManga()">Mangás</a>
                 <a class="nav-link" href="#" onclick="goDC()">DC Comics</a>
-                <a class="nav-link" href="#">Marvel Comics</a>
-                <a class="nav-link" href="#">Mauricio de Sousa Produções</a>
+                <a class="nav-link" href="#" onclick="goMarvel()">Marvel Comics</a>
+                <a class="nav-link" href="#" onclick="goMSP()">Mauricio de Sousa Produções</a>
             </nav>
         </div>
 
@@ -73,11 +74,11 @@
           </button>
         </div>
 
-        <main role="main" class="container">
+        <main role="main" class="container mb-2">
           <a href="adicionar-hq.html"><i class="fas fa-plus bg-rosa text-success rounded-circle d-inline-block p-3 shadow-lg adc-hq"></i></a>
 
           <div class="row mt-3 px-2">
-            <div class="col-6 px-2 todos">
+            <div class="col-6 px-2 todos dcComics Enc noMSP noMarvel noAvulso noCol noManga">
               <div class="shadow-sm">
                 <a href="quadrinho-1.html" class="text-body no-underline">
                 <img src="img/capa/academia-gotham-segundo-semestre-1.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -92,7 +93,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos marvelCom noDC noMSP noManga Avulso noEnc noCol">
               <div class="shadow-sm">
                 <a href="quadrinho-2.html" class="text-body no-underline">
                 <img src="img/capa/doutor-estranho-a-marca-16.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -107,7 +108,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos">
+            <div class="col-6 px-2 todos dcComics Enc Col noManga noAvulso noMarvel noMSP">
               <div class="shadow-sm">
                 <a href="quadrinho-3.html" class="text-body no-underline">
                 <img src="img/capa/lendas-do-universo-dc-novos-titas-3.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -122,7 +123,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos dcComics Enc noMarvel noMSP noManga noCol noAvulso">
               <div class="shadow-sm">
                 <a href="quadrinho-4.html" class="text-body no-underline">
                 <img src="img/capa/sandman-o-teatro-do-misterio-1-o-tarantula.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -137,7 +138,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos marvelCom Avulso noDC noEnc noMSP noManga noCol">
               <div class="shadow-sm">
                 <a href="quadrinho-5.html" class="text-body no-underline">
                 <img src="img/capa/thor-guerra-13.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -152,7 +153,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos MSP Avulso Manga noDC noEnc noCol noMarvel">
               <div class="shadow-sm">
                 <a href="quadrinho-6.html" class="text-body no-underline">
                 <img src="img/capa/turma-da-monica-jovem-94-reinado-dos-jovens.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -167,7 +168,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos Enc noCol noDC noMSP noManga noMarvel noAvulso">
               <div class="shadow-sm">
                 <a href="quadrinho-7.html" class="text-body no-underline">
                 <img src="img/capa/corto-maltese.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -182,7 +183,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos MSP Enc Col noDC noMarvel noAvulso noManga">
               <div class="shadow-sm">
                 <a href="quadrinho-8.html" class="text-body no-underline">
                 <img src="img/capa/jeremias-pele.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -197,7 +198,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos Enc Col noMarvel noAvulso noManga noMSP noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-9.html" class="text-body no-underline">
                 <img src="img/capa/moby-dick.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -212,7 +213,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-6 px-2 todos noDC">
+            <div class="col-6 px-2 todos Manga Col noEnc Avulso noMarvel noMSP noDC">
               <div class="shadow-sm">
                 <a href="quadrinho-10.html" class="text-body no-underline">
                 <img src="img/capa/boku-no-hero-vol-4.jpg" class="img-fluid rounded-top" alt="Responsive image">
@@ -281,20 +282,5 @@
         <script src="js/offcanvas.js"></script>
         <script src="js/liga.js"></script>
         <script src="js/preloader.js"></script>
-        <script type="text/javascript">
-            $(window).on('load',function(){
-                $('#myModal').modal('show');
-            });
-        </script>
-        <script>
-          var a = document.getElementById('tfnewsearch');
-          a.addEventListener('submit',function(e) {
-          e.preventDefault();
-          var b = document.getElementById('tftextinput').value;
-          window.location.href = 'https://sejaliga.github.io/'+b;
-
-          });
-
-          </script>
     </body>
 </html>

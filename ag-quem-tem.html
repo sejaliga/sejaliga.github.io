@@ -31,14 +31,14 @@
     <body>
        <div class="nav-scroller bg-white shadow-sm">
             <nav class="nav nav-underline">
-                <a class="nav-link active" href="#">Todos</a>
+                <a class="nav-link active" href="#" onclick="goTodosqt()">Todos</a>
                 <!--a class="nav-link" href="#">
                     Friends
                     <span class="badge badge-pill bg-light align-text-bottom">27</span>
                 </a-->
-                <a class="nav-link" href="#">Empréstimo</a>
-                <a class="nav-link" href="#">Troca</a>
-                <a class="nav-link" href="#">Doação</a>
+                <a class="nav-link" href="#" onclick="goEmp()">Empréstimo</a>
+                <a class="nav-link" href="#" onclick="goTrocar()">Troca</a>
+                <a class="nav-link" href="#" onclick="goDoar()">Doação</a>
             </nav>
         </div>
 
@@ -51,7 +51,7 @@
         </div>
 
         <main role="main" class="container mt-3">
-            <a href="ag-eu-tenho.html" class="no-underline text-dark"><div class="media mb-3">
+            <a href="ag-eu-tenho.html" class="no-underline text-dark todosqt troc noEmp noDoar"><div class="media mb-3">
               <img class="align-self-start mr-3 img-fluid rounded w-25 shadow-sm" src="img/user/pdr2001-1.png" alt="Generic placeholder image">
               <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
                 <h5 class="mt-0 mb-1">Pedro Ramos</h5>
@@ -67,7 +67,7 @@
                 <i class="fas fa-exchange-alt text-primary"></i> <span class="text-primary">quer trocar</span></p>
               </div>
             </div></a>
-            <div class="media mb-3">
+            <div class="media mb-3 todosqt doar noEmp noTroc">
               <img class="align-self-start mr-3 img-fluid rounded w-25 shadow-sm" src="img/user/tumblr_ovqd32yMBO1t4rhclo4_400.png" alt="Generic placeholder image">
               <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
                 <h5 class="mt-0 text-dark">Igor Prata</h5>
@@ -75,7 +75,7 @@
                 <i class="fas fa-gift text-danger"></i> <span class="text-danger">quer doar</span></p>
               </div>
             </div>
-            <div class="media mb-3">
+            <div class="media mb-3 todosqt emp noTroc noDoar">
               <img class="align-self-start mr-3 img-fluid rounded w-25 shadow-sm" src="img/user/tumblr_phweshgI671t4rhclo5_400.png" alt="Generic placeholder image">
               <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
                 <h5 class="mt-0">Fernando Sousa</h5>
@@ -83,7 +83,7 @@
                 <i class="fas fa-hand-holding-heart text-success"></i> <span class="text-success">quer emprestar</span></p>
               </div>
             </div>
-            <div class="media mb-3">
+            <div class="media mb-3 todosqt doar noEmp noTroc">
               <img class="align-self-start mr-3 img-fluid rounded w-25 shadow-sm" src="img/user/tumblr_o7mwjvKx1F1vs5d3lo4_400.png" alt="Generic placeholder image">
               <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
                 <h5 class="mt-0 text-dark">Beatriz Oliveira</h5>
@@ -91,7 +91,7 @@
                 <i class="fas fa-gift text-danger"></i> <span class="text-danger">quer doar</span></p>
               </div>
             </div>
-            <div class="media mb-3">
+            <div class="media mb-3 todosqt emp noTroc noDoar">
               <img class="align-self-start mr-3 img-fluid rounded w-25 shadow-sm" src="img/user/tumblr_ow0l20YcGM1v1u7rro9_500.jpg" alt="Generic placeholder image">
               <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
                 <h5 class="mt-0 text-dark">Nathália Valente</h5>
@@ -99,7 +99,7 @@
                 <i class="fas fa-hand-holding-heart text-success"></i> <span class="text-success">quer emprestar</span></p>
               </div>
             </div>
-            <div class="media mb-3">
+            <div class="media mb-3 todosqt emp noTroc noDoar">
               <img class="align-self-start mr-3 img-fluid rounded w-25 shadow-sm" src="img/user/tumblr_ow0l20YcGM1v1u7rro2_1280.jpg" alt="Generic placeholder image">
               <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
                 <h5 class="mt-0 text-dark">Clarissa Vargas</h5>
@@ -174,6 +174,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/vendor/holder.min.js"></script>
         <script src="js/offcanvas.js"></script>
+        <script src="js/liga.js"></script>
         <script type="text/javascript">
             $(window).on('load',function(){
                 $('#myModal').modal('show');
