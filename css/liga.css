@@ -7,23 +7,23 @@ body {
 }
 
 .bg-liga {
-  background-color: #504F4E;
+  background-color: #504F4E !important;
 }
 
 .bg-lyellow {
-    background-color: #FEDC16;
+    background-color: #FEDC16 !important;
 }
 
 .bg-rosa {
-    background-color: #D60A51;
+    background-color: #D60A51 !important;
 }
 
 .txt-liga {
-    color: #504F4E;
+    color: #504F4E !important;
 }
 
 .txt-light {
-  color: #9E9E9E;
+  color: #9E9E9E !important;
 }
 
 .titulo-hq {
@@ -114,6 +114,10 @@ body {
 
 .text-success {
   color: #FFC900 !important;
+}
+
+.text-verde {
+  color: #28a745;
 }
 
 .btn-rosa {
