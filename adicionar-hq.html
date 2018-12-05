@@ -30,61 +30,64 @@
 
     <body>
         <!--div class="alert alert-warning alert-dismissible fade show border-0 rounded-0 shadow-sm" role="alert">
-              <h4 class="alert-heading">Bem-vindo(a) Liga!</h4>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <h4 class="alert-heading">Anúncio</h4>
+              <p>Fernando ajuda nois novamente. //aqui seria onde tem fotos tiradas pelo usuário, comentários de quem está anunciando e de outros usuários sobre o usuário anunciante</p>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div-->
 
-        <main role="main" class="container mt-3">
-            <div class="media">
-                <img class="align-self-start mr-3 img-fluid rounded w-50 shadow-sm" src="img/capa/academia-gotham-segundo-semestre-1.jpg" alt="Academia Gotham">
-                <div class="media-body bg-white rounded px-3 py-2 shadow-sm">
-                    <h4 class="mt-0">Academia Gotham: Segundo Semestre Vol. 1</h4>
-                    <hr />
-                    <p style="margin-bottom: .6rem!important;">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    </p>
-                    <a href="ag-quem-tem.html" class="no-underline"><button type="button" class="btn btn-primary btn-block btn-sm mb-2">
-                      Quem tem <span class="badge badge-light">27</span>
-                    </button></a>
-
-                </div>
-            </div>
-
-            <div class="btn-group mt-3 mb-3 container p-0 text-center" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-dark w-50" data-toggle="collapse" data-target="#collapseSinopse" aria-expanded="true" aria-controls="collapseSinopse">Sinopse</button>
-              <button type="button" class="btn btn-secondary w-50" data-toggle="collapse" data-target="#collapseFicha" aria-expanded="false" aria-controls="collapseFicha">Ficha Técnica</button>
-            </div>
-
-          <div class="row mb-3 px-2 collapse show" id="collapseSinopse">
-              <div class="col-12 px-2">
-                  <div class="bg-white rounded px-3 py-2 shadow-sm">
-                  <h5>Sinopse</h5>
-                  <p>Olive Silverlock tem sido quase uma prisioneira da Academia Gotham há vários meses. Apesar de se sentir encurralada na prestigiada instituição de ensino, no entanto, a atormentada garota encontrou lá um grupo de amigos fiéis, que a ajudaram a esquecer seus muitos problemas — entre eles, o fato de ser filha de uma cruel supervilã, falecida há não muito tempo. Mas será que essa amizade vai ser suficiente para livrar a menina do legado sombrio que a acompanha?</p>
-                  </div>
-              </div>
+        <main role="main" class="container my-3">
+          <h5 class="bg-liga text-white p-3 rounded shadow-sm mb-3">Adicionar quadrinho à biblioteca</h5>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Qual o título do seu quadrinho?</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="O Título">
           </div>
-          <div class="row px-2 mb-3 collapse" id="collapseFicha">
-              <div class="col-12 px-2">
-                  <div class="bg-white rounded px-3 py-2 shadow-sm">
-                  <h5>Ficha técnica</h5>
-                    <p><span class="font-weight-bold">Roteiro:</span> Brenden Fletcher<br>
-                    <span class="font-weight-bold">Desenho:</span> Adam Archer<br>
-                    <span class="font-weight-bold">Arte-Final:</span> Sandra Hope<br>
-                    <span class="font-weight-bold">Cores:</span> Serge Lapointe<br>
-                    <span class="font-weight-bold">Letrista:</span> Maurício Wallace<br>
-                    <span class="font-weight-bold">Tradutor:</span> Bernardo Santana, Paulo H. Cecconi<br>
-                    <span class="font-weight-bold">Editor original:</span> Rebecca Taylor<br>
-                    <span class="font-weight-bold">Editora:</span> Panini<br><br>
-                    <span class="font-italic">132 páginas</span></p>
-                  </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Conte aos outros algo sobre seu quadrinho!</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="m-0" for="exampleFormControlSelect1">Qual é a condição do seu quadrinho, de 1 a 5?</label>
+            <label class="small" for="exampleFormControlSelect1">(de melhor para pior, sendo 1 o melhor estado possível)</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Por que essa nota?</label>
+            <input type="text" class="form-control text-truncate" id="formGroupExampleInput" placeholder="Pode estar amassado, rasgado, folhas faltando etc">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">Fazer upload de fotos do seu quadrinho</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">O que você quer fazer?</label>
+            <div class="bg-white px-3 py-2 rounded" style="border: 1px solid #ced4da;">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  <i class="fas fa-hand-holding-heart text-success"></i> Emprestar
+                </label>
               </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  <i class="fas fa-exchange-alt text-primary"></i> Trocar
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  <i class="fas fa-gift text-danger"></i> Doar
+                </label>
+              </div>
+            </div>
           </div>
         </main>
 
@@ -152,10 +155,13 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/vendor/holder.min.js"></script>
         <script src="js/offcanvas.js"></script>
+        <script src="js/jquery.bcSwipe.min.js"></script>
         <script type="text/javascript">
             $(window).on('load',function(){
                 $('#myModal').modal('show');
             });
+
+            $('.carousel').bcSwipe({ threshold: 50 });
         </script>
     </body>
 </html>
